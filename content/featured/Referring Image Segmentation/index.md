@@ -1,8 +1,8 @@
 ---
 date: '1'
-title: 'Halcyon Theme'
+title: 'Referring Segmentation'
 cover: './halcyon.png'
-github: 'https://github.com/bchiang7/halcyon-site'
+github: 'https://github.com/nero1342/VLFormer-RIS'
 external: 'https://halcyon-theme.netlify.com/'
 tech:
   - VS Code
