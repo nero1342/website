@@ -1,0 +1,18 @@
+---
+date: '2022-6'
+title: 'Flexible Interactive Retrieval SysTem 3.0 for Visual Lifelog Exploration at LSC 2022
+'
+github: ''
+external: 'https://dl.acm.org/doi/abs/10.1145/3512729.3533013'
+tech:
+  - Nhat Hoang-Xuan
+  - Hoang-Phuc Trang-Trung
+  - E-Ro Nguyen
+  - Thanh-Cong Le
+  - Tu-Khiem Le
+  - Van-Tu Ninh
+  - Cathal Gurrin
+  - Minh-Triet Tran
+company: "ICMR'22"
+showInProjects: true
+---

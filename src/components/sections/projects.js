@@ -182,6 +182,7 @@ const Projects = () => {
               tech
               github
               external
+              company
             }
             html
           }
@@ -213,14 +214,14 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, title, tech, company } = frontmatter;
 
     return (
       <div className="project-inner">
         <header>
           <div className="project-top">
             <div className="folder">
-              <Icon name="Folder" />
+              <Icon name="Folder" /> {company}
             </div>
             <div className="project-links">
               {github && (
@@ -253,8 +254,12 @@ const Projects = () => {
         <footer>
           {tech && (
             <ul className="project-tech-list">
-              {tech.map((tech, i) => (
-                <li key={i}>{tech}</li>
+              {tech.map((item, i) => (
+                <li key={i}>
+                  {item === 'E-Ro Nguyen' && <u>{item}</u>}
+                  {item !== 'E-Ro Nguyen' && item}{' '}
+                  {i !== tech.length - 1 && <span className="separator">&middot;</span>}
+                </li>
               ))}
             </ul>
           )}
@@ -265,7 +270,7 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+      <h2 ref={revealTitle}>Publications</h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive

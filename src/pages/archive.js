@@ -152,8 +152,8 @@ const ArchivePage = ({ location, data }) => {
 
       <main>
         <header ref={revealTitle}>
-          <h1 className="big-heading">Archive</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
+          <h1 className="big-heading">Publications Archive</h1>
+          <p className="subtitle">A big list of publications I’ve worked on</p>
         </header>
 
         <StyledTableContainer ref={revealTable}>
@@ -162,8 +162,8 @@ const ArchivePage = ({ location, data }) => {
               <tr>
                 <th>Year</th>
                 <th>Title</th>
-                <th className="hide-on-mobile">Made at</th>
-                <th className="hide-on-mobile">Built with</th>
+                <th className="hide-on-mobile">Accepted at</th>
+                <th className="hide-on-mobile">Authors</th>
                 <th>Link</th>
               </tr>
             </thead>
@@ -194,7 +194,8 @@ const ArchivePage = ({ location, data }) => {
                         {tech?.length > 0 &&
                           tech.map((item, i) => (
                             <span key={i}>
-                              {item}
+                              {item === 'E-Ro Nguyen' && <u>{item}</u>}
+                              {item !== 'E-Ro Nguyen' && item}
                               {''}
                               {i !== tech.length - 1 && <span className="separator">&middot;</span>}
                             </span>
@@ -256,8 +257,6 @@ export const pageQuery = graphql`
             tech
             github
             external
-            ios
-            android
             company
           }
           html
