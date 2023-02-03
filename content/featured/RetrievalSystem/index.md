@@ -1,17 +1,21 @@
 ---
 date: '1'
 title: 'Interactive Retrieval System'
-cover: './halcyon.png'
-github: 'https://github.com/nero1342/'
-# external: 'https://halcyon-theme.netlify.com/'
+cover: './demo.png'
+github: 'https://github.com/nero1342/ImageRetrievalWithExplainability'
 tech:
   - PyTorch
   - ReactJS
   - Django
   - Milvus
   - OpenAI's CLIP
+  - Elasticsearch
 ---
 
-An interactive retrieval system for visual data.
+An interactive retrieval system for visual data with multiple effective filter algorithms to search and retrieve relevant images fast and accurately.
 
-<!-- A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=brittanychiang.halcyon-vscode), [Package Control](https://packagecontrol.io/packages/Halcyon%20Theme), [Atom Package Manager](https://atom.io/themes/halcyon-syntax), and [npm](https://www.npmjs.com/package/hyper-halcyon-theme). -->
+Unlike other retrieval systems, we provide an segmentation mask as an explanability for the retrieval results.
+
+Integrated and took advantages from OpenAI's CLIP to align text prompts and images. Converted, stored and indexed millions of images as vector embeddings using Milvus.
+
+Got 10/10 in thesis defense, First Prize in Student Scientific Research Award(EURÉKA).

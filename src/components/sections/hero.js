@@ -66,10 +66,11 @@ const Hero = () => {
     <>
       <p>
         I'm a passionate Computer Science graduate with a focus on Computer Vision, Machine
-        Learning, and Algorithms. Experienced in developing and testing algorithms for image and
-        video understanding. Currently, I'm seeking a challenging role in the field of computer
-        vision and machine learning where I can utilize my skills and knowledge to contribute to
-        cutting-edge projects and advance my career.
+        Learning, and Algorithms. I bring 3 years of experience in developing algorithms for image
+        and video understanding, as well as 6 years of competitive programming. Currently, I'm
+        seeking a challenging role in the field of computer vision and machine learning where I can
+        utilize my skills and knowledge to contribute to cutting-edge projects and advance my
+        career.
       </p>
     </>
   );
