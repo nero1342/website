@@ -7,10 +7,12 @@ export { default as Side } from './side';
 export { default as Social } from './social';
 export { default as Email } from './email';
 export { default as Footer } from './footer';
+
 export { default as Hero } from './sections/hero';
 export { default as About } from './sections/about';
-export { default as Jobs } from './sections/jobs';
+export { default as News } from './sections/news';
+export { default as Experience } from './sections/experience';
 export { default as Featured } from './sections/featured';
-export { default as Projects } from './sections/projects';
 export { default as Publications } from './sections/publications';
+export { default as Awards } from './sections/awards';
 export { default as Contact } from './sections/contact';

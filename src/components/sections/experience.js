@@ -7,7 +7,7 @@ import { KEY_CODES } from '@utils';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
 
-const StyledJobsSection = styled.section`
+const StyledExperienceSection = styled.section`
   max-width: 700px;
 
   .inner {
@@ -164,11 +164,11 @@ const StyledTabPanel = styled.div`
   }
 `;
 
-const Jobs = () => {
+const Experience = () => {
   const data = useStaticQuery(graphql`
     query {
-      jobs: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/content/jobs/" } }
+      experience: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/content/experience/" } }
         sort: { fields: [frontmatter___date], order: DESC }
       ) {
         edges {
@@ -187,7 +187,7 @@ const Jobs = () => {
     }
   `);
 
-  const jobsData = data.jobs.edges;
+  const experienceData = data.experience.edges;
 
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
@@ -243,13 +243,13 @@ const Jobs = () => {
   };
 
   return (
-    <StyledJobsSection id="jobs" ref={revealContainer}>
-      <h2 className="numbered-heading">Where I’ve Worked</h2>
+    <StyledExperienceSection id="experience" ref={revealContainer}>
+      <h2 className="numbered-heading">Experience</h2>
 
       <div className="inner">
-        <StyledTabList role="tablist" aria-label="Job tabs" onKeyDown={e => onKeyDown(e)}>
-          {jobsData &&
-            jobsData.map(({ node }, i) => {
+        <StyledTabList role="tablist" aria-label="Experience tabs" onKeyDown={e => onKeyDown(e)}>
+          {experienceData &&
+            experienceData.map(({ node }, i) => {
               const { company } = node.frontmatter;
               return (
                 <StyledTabButton
@@ -270,8 +270,8 @@ const Jobs = () => {
         </StyledTabList>
 
         <StyledTabPanels>
-          {jobsData &&
-            jobsData.map(({ node }, i) => {
+          {experienceData &&
+            experienceData.map(({ node }, i) => {
               const { frontmatter, html } = node;
               const { title, url, company, range } = frontmatter;
 
@@ -303,8 +303,8 @@ const Jobs = () => {
             })}
         </StyledTabPanels>
       </div>
-    </StyledJobsSection>
+    </StyledExperienceSection>
   );
 };
 
-export default Jobs;
+export default Experience;

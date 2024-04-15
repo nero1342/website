@@ -3,7 +3,7 @@ date: '2022-9-1'
 title: 'Research Assistant'
 company: 'SeLAB-HCMUS'
 location: 'Ho Chi Minh City, Vietnam'
-range: 'September 2019 - September 2022'
+range: 'September 2019 - September 2023'
 url: 'https://www.selab.hcmus.edu.vn'
 ---
 

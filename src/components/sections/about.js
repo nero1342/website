@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+import Skills from './skills';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -81,8 +82,8 @@ const StyledPic = styled.div`
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
+      // mix-blend-mode: multiply;
+      // filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
 
@@ -125,8 +126,6 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Python', 'C/C++', 'Django', 'PyTorch'];
-
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
@@ -138,34 +137,30 @@ const About = () => {
               Hello! My name is E-Ro Nguyen. I am recently graduated with Bachelor's degree in
               Computer Science in the{' '}
               <a href="https://www.ctda.hcmus.edu.vn/en/academic-programs/advanced-program-in-computer-science/">
-                Advanced Program in Computer Science
-              </a>
-              , (APCS) at the <a href="https://hcmus.edu.vn">University of Science</a>, VNU-HCM,
-              Vietnam.
+                {' '}
+                APCS{' '}
+              </a>{' '}
+              at the <a href="https://hcmus.edu.vn">University of Science, VNU-HCM</a>, Vietnam.
             </p>
             <p>
-              In my undergraduate years, I was a research assistant at the{' '}
-              <a href="https://selab.hcmus.edu.vn">Software Engineering Lab, HCMUS</a>, advised by
-              Assoc. Professor{' '}
+              In my undergraduate years, I was a research assistant at the SELab, HCMUS, advised by{' '}
               <a href="https://scholar.google.com/citations?user=lt2ATkkAAAAJ&hl=en">
-                Minh-Triet Tran
+                Professor. Minh-Triet Tran{' '}
               </a>
               . I also worked as an Research Intern at <a href="https://vinai.io">VinAI Research</a>
-              , advised by Professor{' '}
-              <a href="https://www3.cs.stonybrook.edu/~minhhoai/index.html">Minh-Hoai Nguyen</a> and
-              Assoc. Professor{' '}
-              <a href="https://scholar.google.com/citations?user=lt2ATkkAAAAJ&hl=en">
-                Minh-Triet Tran
+              , advised by
+              <a href="https://researchers.adelaide.edu.au/profile/minhhoai.nguyen">
+                Prof. Minh Hoai
               </a>
               .
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            {/* <Skills/> */}
           </div>
 
-          <ul className="skills-list">
+          {/* <ul className="skills-list">
             {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul>
+          </ul> */}
         </StyledText>
 
         <StyledPic>
@@ -173,6 +168,7 @@ const About = () => {
             <StaticImage
               className="img"
               src="../../images/me.jpg"
+              // src="../../../content/skills/c-plus-plus.png"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
@@ -181,6 +177,9 @@ const About = () => {
           </div>
         </StyledPic>
       </div>
+
+      <p>Here are a few technologies I've been working with recently:</p>
+      <Skills />
     </StyledAboutSection>
   );
 };

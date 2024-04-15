@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'E-Ro Nguyen',
     description:
-      'E-Ro is an AI Researcher and Engineer who specializes in building (and occasionally designing) exceptional AI models.',
-    siteUrl: 'https://nero.com', // No trailing slash allowed!
+      'E-Ro is an AI Researcher who specializes in building (and occasionally designing) exceptional AI models.',
+    siteUrl: 'https://nero1342.site', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@bchiang7',
   },
@@ -54,8 +54,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/content/projects`,
+        name: `publications`,
+        path: `${__dirname}/content/publications`,
       },
     },
     {

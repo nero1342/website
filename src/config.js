@@ -30,18 +30,25 @@ module.exports = {
       url: '/#about',
     },
     {
-      name: 'Experience',
-      url: '/#jobs',
+      name: 'News',
+      url: '/#news',
     },
     {
-      name: 'Work',
+      name: 'Experience',
+      url: '/#experience',
+    },
+    {
+      name: 'Projects',
       url: '/#projects',
     },
     {
-      name: 'Publication',
+      name: 'Publications',
       url: '/#publications',
     },
-
+    {
+      name: 'Awards',
+      url: '/#awards',
+    },
     {
       name: 'Contact',
       url: '/#contact',
@@ -52,6 +59,7 @@ module.exports = {
     green: '#64ffda',
     navy: '#0a192f',
     darkNavy: '#020c1b',
+    white: '#FFFFFF',
   },
 
   srConfig: (delay = 200, viewFactor = 0.25) => ({
